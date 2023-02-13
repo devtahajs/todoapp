@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const _ = require("lodash")
 
+const port = 9000;
+
 // database connection
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', true);
@@ -154,6 +156,6 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+app.listen(9000, () => {
+  console.log(`Server is running on Port ${port}`);
 });
